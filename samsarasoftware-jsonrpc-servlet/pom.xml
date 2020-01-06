@@ -65,7 +65,7 @@
 						<configuration>
 							<resources>
 								<resource>
-									<directory>${env.SAMSARASOFTWARE_WORKSPACE_DIR}/net.samsarasoftware/src/license/</directory>
+									<directory>${basedir}/../net.samsarasoftware/src/license/</directory>
 									<include>THIRD-PARTY.properties</include>
 									<filtering>true</filtering>
 								</resource>

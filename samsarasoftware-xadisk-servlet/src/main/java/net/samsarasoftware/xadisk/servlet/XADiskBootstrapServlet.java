@@ -1,7 +1,5 @@
 package net.samsarasoftware.xadisk.servlet;
 
-import java.util.Enumeration;
-
 /*-
  * #%L
  * samsarasoftware-xadisk-servlet
@@ -22,6 +20,7 @@ limitations under the License.
  * #L%
  */
 
+import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.regex.Matcher;
