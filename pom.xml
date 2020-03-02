@@ -9,7 +9,7 @@
 
 	<groupId>net.samsarasoftware.j2ee</groupId>
 	<artifactId>samsarasoftware-j2ee</artifactId>
-	<version>0.2.0</version>
+	<version>0.2.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<licenses>
@@ -37,7 +37,7 @@
 
 	<scm>
 		<developerConnection>scm:git:https://github.com/perelengo/samsarasoftware-j2ee.git</developerConnection>
-		<tag>samsarasoftware-j2ee-0.2.0</tag>
+		<tag>HEAD</tag>
 	</scm>
 	<distributionManagement>
 		<repository>
