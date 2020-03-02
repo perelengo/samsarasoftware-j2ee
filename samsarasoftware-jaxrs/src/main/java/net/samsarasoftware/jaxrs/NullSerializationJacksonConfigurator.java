@@ -19,22 +19,27 @@ See the License for the specific language governing permissions and
 limitations under the License.
  * #L%
  */
-import java.util.HashSet;
-import java.util.Set;
 
-import javax.ws.rs.core.Application;
-public class JaxRsConfig extends Application {
+import javax.ws.rs.Consumes;
+import javax.ws.rs.Produces;
+import javax.ws.rs.ext.ContextResolver;
+import javax.ws.rs.ext.Provider;
 
-     @Override
-     public Set<Class<?>> getClasses() {
-         Set<Class<?>> classes = new HashSet<Class<?>>();
+import org.codehaus.jackson.map.ObjectMapper;
+import org.codehaus.jackson.map.annotate.JsonSerialize;
 
-         // your classes here
-         classes.add(NullSerializationJacksonConfigurator.class);
-         classes.add(ISO8601DateJacksonConfigurator.class);
-         classes.add(ISO8601DateProvider.class);
-         classes.add(ExceptionMapper.class);
-         return classes;
-      }
+@Provider
+@Consumes("application/json")
+@Produces("application/json")
+public class NullSerializationJacksonConfigurator implements ContextResolver<ObjectMapper> {
 
+    public NullSerializationJacksonConfigurator() {
+        mapper.setSerializationInclusion(JsonSerialize.Inclusion.NON_NULL);
+    }
+
+    public ObjectMapper getContext(Class<?> clazz) {
+        return mapper;
+    }
+
+    private final ObjectMapper mapper = new ObjectMapper();
 }
