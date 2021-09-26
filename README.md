@@ -2,4 +2,5 @@
 
 Java library used in code generated with https://www.samsara-software.es
 
-Servlets and JAX-RS base controllers and utils. 
+1. Servlets and JAX-RS base controllers and utils. 
+2. XADISK (transactional filesystem utils) adapter for servlets. 
